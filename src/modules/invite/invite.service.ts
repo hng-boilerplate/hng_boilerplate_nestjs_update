@@ -192,10 +192,4 @@ export class InviteService {
       invitations,
     };
   }
-
-  async findAllInvitations(): Promise<Invite[]> {
-  return await this.inviteRepository.find({
-    relations: ['organisation', 'user'],
-  });
-}
 }
